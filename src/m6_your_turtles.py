@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Zack Watson.
 """
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ###############################################################################
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m4e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -27,3 +27,66 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 ###############################################################################
+
+import rosegraphics as rg
+
+window=rg.TurtleWindow()
+window.delay(50)
+
+zack=rg.SimpleTurtle('turtle')
+zack.pen = rg.Pen('green',10)
+zack.speed = 10
+
+callan=rg.SimpleTurtle('turtle')
+callan.pen=rg.Pen('magenta',5)
+callan.speed = 10
+
+zack.pen_up()
+zack.right(45)
+zack.backward(500)
+zack.left(45)
+zack.pen_down()
+zack.forward(800)
+zack.left(40)
+zack.backward(1000)
+zack.right(40)
+zack.forward(750)
+zack.pen_up()
+
+callan.pen_up()
+callan.left(45)
+callan.backward(350)
+callan.right(45)
+callan.pen_down()
+callan.draw_square(500)
+callan.pen_up()
+callan.forward(250)
+radius = 250
+callan.pen=rg.Pen('yellow',10)
+
+for k in range(12):
+
+    callan.pen_down()
+    callan.draw_circle(radius)
+    callan.pen_up()
+    callan.left(90)
+    callan.forward(10)
+    callan.right(90)
+    radius = radius-20
+
+zack.right(40)
+zack.backward(1000)
+zack.right(50)
+zack.pen = rg.Pen('cyan',5)
+zack.speed = 20
+
+for j in range(14):
+
+    zack.pen_down()
+    zack.forward(50)
+    zack.pen_up()
+    zack.left(90)
+    zack.forward(50)
+    zack.right(90)
+
+window.close_on_mouse_click()
