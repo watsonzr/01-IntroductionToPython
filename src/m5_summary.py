@@ -2,15 +2,15 @@
 An exercise that summarizes what you have learned in this Session.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Zack Watson.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   Write code that constructs a SimpleTurtle with a red Pen
 #   and makes it move around a bit.  Don't forget to:
 #     -- import rosegraphics and construct a TurtleWindow
@@ -27,3 +27,30 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #   As always, COMMIT-and-PUSH when you are done with this module.
 #
 ###############################################################################
+
+import rosegraphics as rg
+
+window=rg.TurtleWindow()
+
+window.delay(50)
+zack=rg.SimpleTurtle('turtle')
+zack.pen = rg.Pen('green',10)
+zack.speed = 8
+
+zack.forward(100)
+zack.right(90)
+zack.forward(200)
+zack.right(45)
+zack.forward(50)
+zack.right(90)
+zack.forward(200)
+zack.right(90)
+zack.backward(100)
+zack.left(45)
+zack.pen_up()
+zack.forward(500)
+zack.pen_down()
+zack.right(90)
+zack.forward(150)
+
+window.close_on_mouse_click()
